@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
   processLogout() {
     sessionStorage.removeItem('sid');
     this.router.navigate(['login']);
