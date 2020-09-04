@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="background-color: black;">
   <div class="row bg-primary d-flex justify-content-center" style="height: 100vh;">
     <div class="col-10 d-flex justify-content-center" style="height: 100%;">
     <ngb-carousel *ngIf="images">
@@ -42,153 +42,29 @@
   </div>
   </div>
   <!-- content box -->
-   <!-- first movie box -->
-   <div class="row " style="display: flex;height: 625px; justify-content: space-between; margin-top: 45px;margin-bottom: 10px">
-    <div class="col"></div>
-      <!-- center main content block -->
-    <div class="col-11" style="background-color: rgb(32, 31, 31);">
-      <div class="row" style="display: flex;flex-direction: row;height:9%; align-items: flex-start;">
-              <h3 style="color: goldenrod; padding-top: 12px;padding-left: 10px;">Explore Ratings & Reviews</h3>
-              
-      </div>
-      <div class="row" style="height: 90%;display: flex;justify-content:space-between;">
-      <!-- 1st image box from 1st row-->
-      <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
-          
-          <div class="row" style="height: 70%;">
-              <img src="assets/twilight_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-              <a routerLink=""> <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-            </a>
-          </div>
-      
-      
-      </div>
-      <!-- 2nd image box from 1st row-->
-      <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
-          <div class="row" style="height: 70%;">
-              <img src="assets/twilight2_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-              <a routerLink=""> <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-            </a>
-          </div>
-      </div>
-      <!-- 3rd image box from 1st row -->
-      <div class="col-3  rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;">
-          <div class="row" style="height: 70%;">
-              <img src="assets/twilight3_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-              <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-          </div>
-          <div class="row" style="height: 10%;display: flex; align-items: center;">
-            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-            </a>
-          </div>
-      </div>
+  <div class="row" style="display: flex;height: 625px; margin-top: 45px;margin-bottom: 10px">
+    <h3 style="color: goldenrod; padding-top: 12px;padding-left: 10px;">Explore Ratings & Reviews</h3>
+  <ng-container *ngFor="let item of list">
+    <div class="col-4 my-3" *ngIf="item.show" style="background-color: rgb(32, 31, 31);">
+      <!-- <h5>{{ item.title }}</h5> -->
+      <div class="row" style="height: 70%;">
+        <img [src]="item.img" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
     </div>
+    <div class="row" style="height: 10%;display: flex; align-items: center;">
+        <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+        <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> {{ item.rating }}</div>
     </div>
-    <div class="col"></div>
-
-  </div>
-  <!-- second movie box -->
-  <div class="row " style="display: flex;height: 585px; justify-content: space-between; margin-top: 30px;margin-bottom: 20px">
-    <div class="col"></div>
-    <!-- center main content block -->
-    <div class="col-11" style="background-color: rgb(32, 31, 31);">
-    <div class="row " style="height: 90%;display: flex;justify-content:space-between;margin-top: 15px;">
-        <!-- 1st image box from 2nd row-->
-        <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
-            
-            <div class="row" style="height: 70%;">
-                <img src="assets/twilight_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-              </a>
-            </div>
-        
-        
-        </div>
-        <!-- 2nd image box from 2nd row-->
-        <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
-            <div class="row" style="height: 70%;">
-                <img src="assets/twilight2_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-              </a>
-            </div>
-        </div>
-        <!-- 3rd image box from 2nd row -->
-        <div class="col-3  rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;">
-            <div class="row" style="height: 70%;">
-                <img src="assets/twilight3_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
-                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
-                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
-            </div>
-            <div class="row" style="height: 10%;display: flex; align-items: center;">
-              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
-              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
-              </a>
-            </div>
-        </div>
-      </div>
+    <div class="row" style="height: 10%;display: flex; align-items: center;">
+        <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+        <a routerLink=""> <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> {{ item.title }}</div></a>
     </div>
-    <div class="col"></div>
+    <div class="row" style="height: 10%;display: flex; align-items: center;">
+      <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+      <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+      </a>
+    </div>
 
-
+  </ng-container>
 </div>
-   
   </div>
 
