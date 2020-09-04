@@ -1,10 +1,194 @@
-<div class="container">
-  <div class="row">
-    <div class="col-4 my-2" *ngFor="let item of list">
-      <h5>About</h5>
-      <div>
-        <img src="assets/IMDB_Logo_2016.jpg" width="140" height="44">
+<div class="container-fluid">
+  <div class="row bg-primary d-flex justify-content-center" style="height: 100vh;">
+    <div class="col-10 d-flex justify-content-center" style="height: 100%;">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide style="height: 60%; width: 100%;">
+        <div class="picsum-img-wrapper d-flex justify-content-center" style="max-height: 100%; max-width: 100%;">
+          <img [src]="images[0]" alt="Random first slide" style="height: 100%; width: 100%;">
+        </div>
+        <div class="carousel-caption">
+          <h3>10 seconds between slides...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide style="height: 60%; width: 100%;">
+        <div class="picsum-img-wrapper d-flex justify-content-center" style="max-height: 100%; max-width: 100%;">
+          <img [src]="images[1]" alt="Random second slide" style="height: 60%; width: 100%;">
+        </div>
+        <div class="carousel-caption">
+          <h3>No mouse events...</h3>
+          <p>This carousel doesn't pause or resume on mouse events</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide style="height: 60%; width: 100%;">
+        <div class="picsum-img-wrapper d-flex justify-content-center" style="max-height: 100%; max-width: 100%;">
+          <img [src]="images[2]"  alt="Random third slide" style="height: 60%; width: 100%;">
+        </div>
+        <div class="carousel-caption">
+          <h3>No keyboard...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide style="height: 60%; width: 100%;">
+        <div class="picsum-img-wrapper d-flex justify-content-center" style="max-height: 100%; max-width: 100%;">
+          <img [src]="images[3]" alt="Random fourth slide" style="height: 60%; width: 100%;">
+        </div>
+        <div class="carousel-caption">
+          <h3>And no wrap after last slide.</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  </div>
+  <!-- content box -->
+   <!-- first movie box -->
+   <div class="row " style="display: flex;height: 625px; justify-content: space-between; margin-top: 45px;margin-bottom: 10px">
+    <div class="col"></div>
+      <!-- center main content block -->
+    <div class="col-11" style="background-color: rgb(32, 31, 31);">
+      <div class="row" style="display: flex;flex-direction: row;height:9%; align-items: flex-start;">
+              <h3 style="color: goldenrod; padding-top: 12px;padding-left: 10px;">Explore Ratings & Reviews</h3>
+              
+      </div>
+      <div class="row" style="height: 90%;display: flex;justify-content:space-between;">
+      <!-- 1st image box from 1st row-->
+      <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
+          
+          <div class="row" style="height: 70%;">
+              <img src="assets/twilight_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+              <a routerLink=""> <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+            </a>
+          </div>
+      
+      
+      </div>
+      <!-- 2nd image box from 1st row-->
+      <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
+          <div class="row" style="height: 70%;">
+              <img src="assets/twilight2_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+              <a routerLink=""> <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+            </a>
+          </div>
+      </div>
+      <!-- 3rd image box from 1st row -->
+      <div class="col-3  rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;">
+          <div class="row" style="height: 70%;">
+              <img src="assets/twilight3_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+              <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+              <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+          </div>
+          <div class="row" style="height: 10%;display: flex; align-items: center;">
+            <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+            <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+            </a>
+          </div>
       </div>
     </div>
+    </div>
+    <div class="col"></div>
+
   </div>
+  <!-- second movie box -->
+  <div class="row " style="display: flex;height: 585px; justify-content: space-between; margin-top: 30px;margin-bottom: 20px">
+    <div class="col"></div>
+    <!-- center main content block -->
+    <div class="col-11" style="background-color: rgb(32, 31, 31);">
+    <div class="row " style="height: 90%;display: flex;justify-content:space-between;margin-top: 15px;">
+        <!-- 1st image box from 2nd row-->
+        <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
+            
+            <div class="row" style="height: 70%;">
+                <img src="assets/twilight_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+              </a>
+            </div>
+        
+        
+        </div>
+        <!-- 2nd image box from 2nd row-->
+        <div class="col-3 rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;" >
+            <div class="row" style="height: 70%;">
+                <img src="assets/twilight2_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+              </a>
+            </div>
+        </div>
+        <!-- 3rd image box from 2nd row -->
+        <div class="col-3  rounded" style="border:honeydew solid 1px;justify-content: center;margin-bottom: 10px;">
+            <div class="row" style="height: 70%;">
+                <img src="assets/twilight3_small.jpg" style="padding: 2px; width: 100%; max-height: 100%;border-radius: 5px;">
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <span class="fa fa-star" style="color: goldenrod;font-size:25px;font:bold;padding-left: 10px;"> </span> -->
+                <div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> 5.0</div>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+                <!-- <i class="material-icons" style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;">local_movies</i> -->
+                <a routerLink=""><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Twilight</div></a>
+            </div>
+            <div class="row" style="height: 10%;display: flex; align-items: center;">
+              <!-- <i class='fab fa-youtube'style="color: whitesmoke;font-size:25px;font:bold;padding-left: 10px;"></i> -->
+              <a href="https://www.youtube.com/watch?v=uxjNDE2fMjI"><div style="color: whitesmoke;font-size:22px;font:bold;padding-left: 10px;"> Trailer</div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+
+
 </div>
+   
+  </div>
+
